@@ -1,0 +1,9 @@
+<a href="/new_dog">New dog</a>
+
+<% dogs.each do |dog| %>
+<a href="/show_dog/<%= dog['id']%>"><h3><%= dog['name']%></h3></a>
+<ul>
+	<li><p><%= dog['breed']%></p></li>
+	<li><p><%= dog['weight']%>kg</p></li>
+</ul>
+<%end%>
