@@ -26,14 +26,10 @@ class ApplicationController < ActionController::Base
 	end
 
 	def create_dog
-		insert_query = <<-SQL
-			INSERT INTO dogs (name, breed, weight)
-			VALUES (?,?,?);
-		SQL
-		connection.execute insert_query,
-			params['name'],
-      params['breed'],
-      params['weight']
+		dog = Dog.new('name' => params['name'],
+									'breed' => params['breed'],
+									'weight' => params['weight'])
+		dog.save
 
 		redirect_to '/list_dogs'	
 	end
