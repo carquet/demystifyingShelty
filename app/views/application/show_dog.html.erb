@@ -2,5 +2,9 @@
 <%= dog['breed']%>
 <%= dog['weight']%>
 <a href="/edit_dog/<%= dog['id'] %>">Update information</a>
+<form method="post" action="/delete/<%= dog['id'] %>" style='display: inline'>
+            <input type="submit" value="Delete" />
+</form>
+
 
 <p><a href="/list_dogs">Back to dogs</a></p>

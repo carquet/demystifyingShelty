@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'create_dog' => 'application#create_dog'
   get '/edit_dog/:id' => 'application#edit_dog'
   post '/update_dog/:id' => 'application#update_dog'
+  post '/delete/:id' => 'application#delete_dog'
 end

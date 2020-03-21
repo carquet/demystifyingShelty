@@ -57,6 +57,12 @@ class ApplicationController < ActionController::Base
 		redirect_to '/list_dogs'
 	end
 
+	def delete_dog
+		connection.execute('DELETE FROM dogs WHERE dogs.id = ?', params['id'])
+		redirect_to '/list_dogs'
+		
+	end
+
 	def connection
 		connection = SQLite3::Database.new 'db/development.sqlite3'
 		connection.results_as_hash = true
