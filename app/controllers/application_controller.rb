@@ -35,8 +35,7 @@ class ApplicationController < ActionController::Base
       params['breed'],
       params['weight']
 
-		redirect_to '/list_dogs'
-		
+		redirect_to '/list_dogs'	
 	end
 
 	def connection

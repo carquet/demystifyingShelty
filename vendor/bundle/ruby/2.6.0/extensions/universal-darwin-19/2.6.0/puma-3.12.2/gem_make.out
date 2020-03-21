@@ -1,13 +1,13 @@
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200218-2535-1ghszcn.rb extconf.rb
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200212-72824-vwh6uj.rb extconf.rb
 checking for BIO_read() in -lcrypto... no
 checking for BIO_read() in -llibeay32... no
 creating Makefile
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
 make "DESTDIR=" clean
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
 make "DESTDIR="
 compiling http11_parser.c
 compiling io_buffer.c
@@ -17,6 +17,6 @@ linking shared-object puma/puma_http11.bundle
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/libressl/lib'
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200218-2535-1s7yahb/puma
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200212-72824-cu2t0x/puma

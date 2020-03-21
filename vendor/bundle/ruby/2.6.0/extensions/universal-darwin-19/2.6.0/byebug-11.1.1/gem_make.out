@@ -1,11 +1,11 @@
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200218-2535-ehs4q.rb extconf.rb
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200212-72824-spbnig.rb extconf.rb
 creating Makefile
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
 make "DESTDIR=" clean
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
 make "DESTDIR="
 compiling breakpoint.c
 compiling byebug.c
@@ -15,6 +15,6 @@ compiling threads.c
 linking shared-object byebug/byebug.bundle
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20200218-2535-17ehde9/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20200212-72824-150u7ie/byebug

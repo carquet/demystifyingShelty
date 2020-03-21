@@ -1,5 +1,5 @@
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200218-2535-1hjgaq0.rb extconf.rb
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200212-72824-1xjzxez.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -17,10 +17,10 @@ checking for sqlite3_int64 in sqlite3.h... yes
 checking for sqlite3_uint64 in sqlite3.h... yes
 creating Makefile
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" clean
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR="
 compiling aggregator.c
 compiling backup.c
@@ -56,6 +56,6 @@ compiling statement.c
 linking shared-object sqlite3/sqlite3_native.bundle
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20200218-2535-1iz14nj/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20200212-72824-12cyi68/sqlite3
