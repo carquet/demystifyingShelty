@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/show_dog/:id'  => 'application#show_dog'
   get '/new_dog' => 'application#new_dog'
   post 'create_dog' => 'application#create_dog'
+  get '/edit_dog/:id' => 'application#edit_dog'
+  post '/update_dog/:id' => 'application#update_dog'
 end

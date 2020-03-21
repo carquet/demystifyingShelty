@@ -38,6 +38,25 @@ class ApplicationController < ActionController::Base
 		redirect_to '/list_dogs'	
 	end
 
+	def edit_dog
+		dog = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", params['id']).first
+		render 'application/edit', locals: {dog: dog}
+		
+	end
+
+	def update_dog
+		update_query = <<-SQL
+		UPDATE dogs
+		SET name = ?,
+		 		breed = ?,
+				weight = ?
+		WHERE dogs.id = ?
+		SQL
+
+		connection.execute update_query, params['name'], params['breed'], params['weight'], params['id']
+		redirect_to '/list_dogs'
+	end
+
 	def connection
 		connection = SQLite3::Database.new 'db/development.sqlite3'
 		connection.results_as_hash = true
