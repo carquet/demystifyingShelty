@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
 	def show_dog
 		
-		dog = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", params['id']).first
+		dog = find_by_id(params['id'])
 
 		render 'application/show_dog', locals: {dog: dog}
 		
@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def edit_dog
-		dog = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", params['id']).first
+		dog = find_by_id(params['id'])
 		render 'application/edit', locals: {dog: dog}
 		
 	end
@@ -63,5 +63,8 @@ class ApplicationController < ActionController::Base
 		connection
 	end
 
+def find_by_id(id)
+	connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", params['id']).first
+end
 	
 end
