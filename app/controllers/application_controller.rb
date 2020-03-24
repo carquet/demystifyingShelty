@@ -32,8 +32,8 @@ class ApplicationController < ActionController::Base
 		SQL
 		connection.execute insert_query,
 			params['name'],
-      params['breed'],
-      params['weight']
+      			params['breed'],
+      			params['weight']
 
 		redirect_to '/list_dogs'	
 	end
