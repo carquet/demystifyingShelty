@@ -21,16 +21,19 @@ class ApplicationController < ActionController::Base
 	end
 
 	def new_dog
-		render 'application/create_dog'
+		dog = Dog.new
+		render 'application/create_dog', locals: {dog: dog}
 	end
 
 	def create_dog
 		dog = Dog.new('name' => params['name'],
 									'breed' => params['breed'],
 									'weight' => params['weight'])
-		dog.save
-
-		redirect_to '/list_dogs'	
+		if dog.save
+			redirect_to '/list_dogs'	
+		else
+			render 'application/create_dog', locals: {dog: dog}
+		end
 	end
 
 	def edit_dog

@@ -13,6 +13,13 @@ class  Dog
 		@weight = attributes['weight']
 	end
 
+	#1. when there is user inout we want to validate the data
+	# #present? is a method provdied by rails >> boolean returns false if called on nil or empty string
+	#what is the reaction if valid or not valid ? ---> #save
+	def valid?
+    name.present? && breed.present? && weight.present?
+  end
+
 # First, we change Model#save to react conditionally, 
 # based on whether or not it's a new_record?. If it is, it calls insert, if not, update.
 #change #insert and #update
@@ -21,11 +28,18 @@ class  Dog
 	end
 
 	def save
+		#2. guard clause:
+		#it prevents the information to be saved on the DB if not valid
+		# the information will not be saved and return false
+		# what next when returns false? -->> inform the user by showing diff views and messages according to situation
+		return false unless valid?
+
 		if new_record?
 			insert
 		else
 			update
 		end
+		true
 	end
 
 	def insert
