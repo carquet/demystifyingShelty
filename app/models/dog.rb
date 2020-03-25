@@ -37,6 +37,14 @@ class  Dog
 		
 	end
 
+	def self.all
+		hashes = connection.execute "SELECT * FROM dogs;"
+		hashes.map do |hash|
+			Dog.new(hash)
+		end
+		
+	end
+
 	def update
 		update_query = <<-SQL
 		UPDATE dogs

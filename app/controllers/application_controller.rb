@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 	def list_dogs
 		
-		dogs = connection.execute "SELECT * FROM dogs;"
+		dogs = Dog.all
 		
 		render 'application/list_dogs', locals: {dogs: dogs}
 	end
