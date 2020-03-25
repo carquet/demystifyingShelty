@@ -1,16 +1,16 @@
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200212-72824-u5jyud.rb extconf.rb
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20200218-2535-rfe9sc.rb extconf.rb
 creating Makefile
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
 make "DESTDIR=" clean
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
 make "DESTDIR="
 compiling websocket_mask.c
 linking shared-object websocket_mask.bundle
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
 
-current directory: /Users/laetitiacarquet/Desktop/railsApp/Demystifying/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+current directory: /Users/laetitiacarquet/Desktop/railsApp/Shelty/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20200212-72824-7abg00
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20200218-2535-n36yaw
