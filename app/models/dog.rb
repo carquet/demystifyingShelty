@@ -2,7 +2,12 @@ class  Dog
 	attr_reader :id, :name, :breed, :weight
 
 	def initialize(attributes={})
-		@id = attributes['id']
+		set_attributes(attributes)
+		
+	end
+
+	def set_attributes(attributes)
+		@id = attributes['id'] if new_record?
 		@name = attributes['name']
 		@breed = attributes['breed']
 		@weight = attributes['weight']
