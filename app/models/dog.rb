@@ -3,7 +3,7 @@ class  Dog
 
 	def initialize(attributes={})
 		set_attributes(attributes)
-		
+		@errors = {}
 	end
 
 	def set_attributes(attributes)
@@ -13,11 +13,13 @@ class  Dog
 		@weight = attributes['weight']
 	end
 
-	#1. when there is user inout we want to validate the data
-	# #present? is a method provdied by rails >> boolean returns false if called on nil or empty string
-	#what is the reaction if valid or not valid ? ---> #save
+	#1. blank is a Rails method
+
 	def valid?
-    name.present? && breed.present? && weight.present?
+		@errors['name']  = "can't be blank" if name.blank?
+    @errors['breed']   = "can't be blank" if breed.blank?
+    @errors['weight'] = "can't be blank" if weight.blank?
+    @errors.empty? #-->true
   end
 
 # First, we change Model#save to react conditionally, 
