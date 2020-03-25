@@ -1,5 +1,5 @@
 class  Dog
-	attr_reader :id, :name, :breed, :weight
+	attr_reader :id, :name, :breed, :weight, :errors
 
 	def initialize(attributes={})
 		set_attributes(attributes)
@@ -14,7 +14,7 @@ class  Dog
 	end
 
 	#1. blank is a Rails method
-
+	#2. displays those errors in the views
 	def valid?
 		@errors['name']  = "can't be blank" if name.blank?
     @errors['breed']   = "can't be blank" if breed.blank?

@@ -2,6 +2,13 @@
 
 <div>
 	<h2>Enter the new puppy here</h2>
+	    <div class="errors">
+      <% dog.errors.each do |attribute, error| %>
+        <p class="error" style="color: orange">
+          <%= attribute %>: <%= error %>
+        </p>
+      <% end%>
+    </div>
 	<form action="/create_dog" method="post">
 		<label>Name: <input type="text" name="name" value="<%= dog.name %>"></label>
 		<br>
