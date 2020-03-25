@@ -8,12 +8,40 @@ class  Dog
 		@weight = attributes['weight']
 	end
 
+# First, we change Model#save to react conditionally, 
+# based on whether or not it's a new_record?. If it is, it calls insert, if not, update.
+#change #insert and #update
+	def new_record?
+		id.nil?
+	end
+
 	def save
+		if new_record?
+			insert
+		else
+			update
+		end
+	end
+
+	def insert
 		insert_query = <<-SQL
 			INSERT INTO dogs (name, breed, weight)
 			VALUES (?,?,?)
 		SQL
-		self.connection.execute insert_query, name, breed, weight
+		connection.execute insert_query, name, breed, weight
+		
+	end
+
+	def update
+		update_query = <<-SQL
+		UPDATE dogs
+		SET name = ?,
+		 		breed = ?,
+				weight = ?
+		WHERE dogs.id = ?
+		SQL
+
+		connection.execute update_query, name, breed, weight, id
 		
 	end
 
@@ -34,3 +62,4 @@ class  Dog
 	end
 
 end
+
