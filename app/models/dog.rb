@@ -58,6 +58,11 @@ class  Dog
 		
 	end
 
+	def destroy
+		connection.execute('DELETE FROM dogs WHERE dogs.id = ?', id)
+		
+	end
+
 	def self.find(id)
 		dog_hash = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", id).first
 		Dog.new(dog_hash)

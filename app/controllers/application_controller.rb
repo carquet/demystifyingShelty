@@ -47,7 +47,9 @@ class ApplicationController < ActionController::Base
 	end
 
 	def delete_dog
-		connection.execute('DELETE FROM dogs WHERE dogs.id = ?', params['id'])
+		dog = Dog.find(params['id'])
+		dog.destroy
+		
 		redirect_to '/list_dogs'
 		
 	end
