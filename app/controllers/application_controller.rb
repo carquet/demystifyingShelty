@@ -14,14 +14,13 @@ class ApplicationController < ActionController::Base
 
 	def show_dog
 		
-		dog = find_by_id(params['id'])
+		dog = Dog.find(params['id'])
 
 		render 'application/show_dog', locals: {dog: dog}
 		
 	end
 
 	def new_dog
-
 		render 'application/create_dog'
 	end
 
@@ -35,21 +34,15 @@ class ApplicationController < ActionController::Base
 	end
 
 	def edit_dog
-		dog = find_by_id(params['id'])
+		dog = Dog.find(params['id'])
 		render 'application/edit', locals: {dog: dog}
 		
 	end
 
 	def update_dog
-		update_query = <<-SQL
-		UPDATE dogs
-		SET name = ?,
-		 		breed = ?,
-				weight = ?
-		WHERE dogs.id = ?
-		SQL
-
-		connection.execute update_query, params['name'], params['breed'], params['weight'], params['id']
+		dog = Dog.find(params['id'])
+		dog.set_attributes('name' => params['name'], 'breed' => params['breed'], 'weight' => params['weight'])
+		dog.save
 		redirect_to '/list_dogs'
 	end
 
@@ -59,14 +52,8 @@ class ApplicationController < ActionController::Base
 		
 	end
 
-	def connection
-		connection = SQLite3::Database.new 'db/development.sqlite3'
-		connection.results_as_hash = true
-		connection
-	end
+	
 
-def find_by_id(id)
-	connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", params['id']).first
-end
+
 	
 end

@@ -1,11 +1,11 @@
 <div>
 	<h2>Enter the new puppy here</h2>
-	<form action="/update_dog/<%= dog['id'] %>" method="post">
-		<label>Name: <input type="text" name="name" value=<%= dog['name']%>></label>
+	<form action="/update_dog/<%= dog.id %>" method="post">
+		<label>Name: <input type="text" name="name" value=<%= dog.name %>></label>
 		<br>
-		<label>Breed: <input type="text" name="breed" value= <%= dog['breed'] %>></label>
+		<label>Breed: <input type="text" name="breed" value= <%= dog.breed %>></label>
 		<br>
-		<label>Weight: <input type="number" name="weight" value= <%= dog['weight'] %>></label>
+		<label>Weight: <input type="number" name="weight" value= <%= dog.weight %>></label>
 	    
 	    <br>
 	    <button type="submit">Submit this form</button>

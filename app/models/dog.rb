@@ -13,14 +13,24 @@ class  Dog
 			INSERT INTO dogs (name, breed, weight)
 			VALUES (?,?,?)
 		SQL
-		connection.execute insert_query, name, breed, weight
+		self.connection.execute insert_query, name, breed, weight
 		
 	end
 
-	def connection
+	def self.find(id)
+		dog_hash = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", id).first
+		Dog.new(dog_hash)
+	end
+
+	def self.connection
 		connection = SQLite3::Database.new 'db/development.sqlite3'
 		connection.results_as_hash = true
 		connection
+	end
+
+	def connection
+		self.class.connection
+		
 	end
 
 end
