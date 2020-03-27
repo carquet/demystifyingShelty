@@ -57,7 +57,12 @@ class ApplicationController < ActionController::Base
 		
 	end
 
-	
+	def create_comment
+		dog = Dog.find(params['dog_id'])
+		dog.create_comment('body' => params['body'], 'potowner' => params['potowner'])
+
+      redirect_to "/show_dog/#{params['dog_id']}"
+  end
 
 
 	

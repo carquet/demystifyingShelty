@@ -18,7 +18,21 @@
           </div>
           <hr />
         <% end %>
-      </div>
+      </div><!-- display each comment -->
       <br />
+      <!-- new comment form -->
+        <form method="post" action="/create_comment_for_dog/<%= dog.id %>">
+
+          <label for="body">Comment</label>
+          <textarea id="body" name="body"></textarea>
+          <br /> <br />
+
+          <label for="potowner">Name</label>
+          <input id="potowner" name="potowner" type="text" />
+          <br /> <br />
+
+          <input type="submit" value="Add Comment" />
+        </form>
+        <hr />
 
 <p><a href="/list_dogs">Back to dogs</a></p>

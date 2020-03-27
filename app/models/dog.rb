@@ -86,6 +86,13 @@ class  Dog
     end
   end
 
+  def create_comment(attributes)
+  	
+  	comment = Comment.new(attributes.merge!('dog_id' => id))
+  	comment.save
+  	
+  end
+
 	def self.find(id)
 		dog_hash = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", id).first
 		Dog.new(dog_hash)
