@@ -5,6 +5,20 @@
 <form method="post" action="/delete/<%= dog.id %>" style='display: inline'>
             <input type="submit" value="Delete" />
 </form>
-
+<div class="comments">
+        <h3>Comments:</h3>
+        <hr />
+        <% comments.each_with_index do |comment, index| %>
+          <div class="comment">
+            <small class="comment_meta">
+              <span class="comment_potential_owner">#<%= index+1 %> by <%= comment['potowner'] %> -</span>
+            
+            </small>
+            <p class="comment_body"><%= comment['body'] %></p>
+          </div>
+          <hr />
+        <% end %>
+      </div>
+      <br />
 
 <p><a href="/list_dogs">Back to dogs</a></p>
