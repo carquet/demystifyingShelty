@@ -8,13 +8,13 @@
 <div class="comments">
         <h3>Comments:</h3>
         <hr />
-        <% comments.each_with_index do |comment, index| %>
+        <% dog.comments.each_with_index do |comment, index| %>
           <div class="comment">
             <small class="comment_meta">
-              <span class="comment_potential_owner">#<%= index+1 %> by <%= comment['potowner'] %> -</span>
+              <span class="comment_potential_owner">#<%= index+1 %> by <%= comment.potowner %> -</span>
             
             </small>
-            <p class="comment_body"><%= comment['body'] %></p>
+            <p class="comment_body"><%= comment.body %></p>
           </div>
           <hr />
         <% end %>

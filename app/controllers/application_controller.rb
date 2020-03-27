@@ -15,9 +15,8 @@ class ApplicationController < ActionController::Base
 	def show_dog
 		
 		dog = Dog.find(params['id'])
-		comments = connection.execute('SELECT * FROM comments WHERE comments.dog_id = ?', params['id'])
 
-		render 'application/show_dog', locals: {dog: dog, comments: comments}
+		render 'application/show_dog', locals: {dog: dog}
 		
 	end
 
@@ -58,11 +57,7 @@ class ApplicationController < ActionController::Base
 		
 	end
 
-	def connection
-		connection = SQLite3::Database.new 'db/development.sqlite3'
-		connection.results_as_hash = true
-		connection
-	end
+	
 
 
 	

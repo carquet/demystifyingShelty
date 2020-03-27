@@ -79,6 +79,13 @@ class  Dog
 		
 	end
 
+	def comments
+    comment_hashes = connection.execute 'SELECT * FROM comments WHERE comments.dog_id = ?', id
+    comment_hashes.map do |comment_hash|
+      Comment.new(comment_hash)
+    end
+  end
+
 	def self.find(id)
 		dog_hash = connection.execute("SELECT * FROM dogs WHERE dogs.id= ? ", id).first
 		Dog.new(dog_hash)
