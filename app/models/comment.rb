@@ -1,12 +1,12 @@
 class Comment
-	attr_reader	:id, :body, :potowner, :dog_id
+	attr_reader	:id, :body, :potowner, :dog_id, :errors
 
 	def initialize(attributes={})
 		@id = attributes['id'] if new_record?
 		@body = attributes['body']
 		@potowner = attributes['potowner']
 		@dog_id = attributes['dog_id']
-		
+		@errors = {}
 	end
 
 	def new_record?
@@ -14,7 +14,14 @@ class Comment
 		
 	end
 
+	def valid?
+    @errors['body']   = "can't be blank" if body.blank?
+    @errors['potowner'] = "can't be blank" if potowner.blank?
+    @errors.empty?
+  end
+
 	def save
+		return false unless valid?
 		if new_record?
 			insert
 		else

@@ -21,6 +21,13 @@
       </div><!-- display each comment -->
       <br />
       <!-- new comment form -->
+      <div class="errors">
+      <% comment.errors.each do |attribute, error| %>
+        <p class="error" style="color: orange">
+          <%= attribute %>: <%= error %>
+        </p>
+      <% end%>
+    </div>
         <form method="post" action="/create_comment_for_dog/<%= dog.id %>">
 
           <label for="body">Comment</label>
